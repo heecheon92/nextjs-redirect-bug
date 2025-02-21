@@ -7,6 +7,7 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const response = NextResponse.next();
   response.headers.set(X_CURRENT_PATH, pathname);
+  return response;
 }
 
 // See "Matching Paths" below to learn more
